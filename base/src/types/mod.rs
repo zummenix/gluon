@@ -777,6 +777,14 @@ where
             _ => false,
         }
     }
+
+    pub fn params(&self) -> &[Generic<Id>] {
+        match *self {
+            Type::Alias(ref alias) => &alias.args,
+            Type::App(ref id, _) => id.params(),
+            _ => &[],
+        }
+    }
 }
 
 impl<T> Type<Symbol, T>
