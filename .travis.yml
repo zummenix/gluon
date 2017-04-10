@@ -24,7 +24,7 @@ script:
   cargo build --release &&
   travis-cargo --only nightly bench &&
   cargo build --all --no-default-features &&
-  ls target/release && ls target/debug
+  ls target/release && echo "----" && ls target/release/deps && echo "----" && ls target/debug
 env:
   global:
   - TRAVIS_CARGO_NIGHTLY_FEATURE="nightly"
