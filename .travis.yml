@@ -22,6 +22,7 @@ script:
   sh ./test-no-skeptic.sh &&
   travis-cargo --only nightly test -- --features "test nightly" -p gluon compile_test &&
   cargo build --release &&
+  cargo build --release -p gluon_repl &&
   travis-cargo --only nightly bench &&
   cargo build --all --no-default-features &&
   ls target/release && echo "----" && ls target/release/deps && echo "----" && ls target/debug
