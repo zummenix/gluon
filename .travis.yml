@@ -41,5 +41,5 @@ deploy:
   file: target/release/gluon
   skip_cleanup: true
   on:
-    tags: true
+    branch: releases2
     repo: gluon-lang/gluon
