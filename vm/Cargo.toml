@@ -34,6 +34,7 @@ lalrpop = { version = "0.12.5", optional = true }
 
 [dev-dependencies]
 lalrpop-util = "0.12.5"
+gluon = { path = "..", version = "0.4.2" } # GLUON
 
 [features]
 test = ["env_logger", "lalrpop", "gluon_parser"]
