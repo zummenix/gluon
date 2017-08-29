@@ -27,7 +27,7 @@ pretty = "0.3.1"
 pretty_assertions = "0.2.0"
 
 [build-dependencies]
-lalrpop = "0.13.1"
+lalrpop = { git = "https://github.com/nikomatsakis/lalrpop", path = "lalrpop", branch "issue-253" }
 
 [features]
 test = ["env_logger"]
